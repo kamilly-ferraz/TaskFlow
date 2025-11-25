@@ -76,29 +76,8 @@
 ---
 
 ## Estrutura do Projeto
+<img width="571" height="450" alt="Captura de Tela 2025-11-25 às 13 08 56" src="https://github.com/user-attachments/assets/10f4fe46-3074-437c-9761-197d055521c0" />
 
-### Backend
-taskflow-backend/
-├─ src/main/java/com/taskflow/
-│ ├─ controller/ # APIs REST
-│ ├─ service/ # Regras de negócio
-│ ├─ repository/ # Acesso a dados
-│ ├─ model/ # Entidades e DTOs
-│ └─ TaskflowApplication.java
-├─ src/main/resources/
-│ ├─ application.properties
-├─ pom.xml
-
-
-### Frontend
-taskflow-frontend/
-├─ src/app/
-│ ├─ components/ # Componentes Standalone (TaskList, TaskForm, etc.)
-│ ├─ services/ # Serviços HTTP (TaskService)
-│ ├─ models/ # Interfaces e tipos TypeScript
-│ └─ app.module.ts
-├─ angular.json
-├─ package.json
 
 
 
