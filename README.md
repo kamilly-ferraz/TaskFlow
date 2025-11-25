@@ -1,7 +1,7 @@
 # TaskFlow - Gerenciador de Tarefas com Atualização em Tempo Real
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Java-21-5382a1?logo=openjdk&logoColor=white" alt="Java 21"/>
+  <img src="https://img.shields.io/badge/Java-17-5382a1?logo=openjdk&logoColor=white" alt="Java 17"/>
   <img src="https://img.shields.io/badge/Spring_Boot-3.3.5-6DB33F?logo=spring-boot&logoColor=white" alt="Spring Boot"/>
   <img src="https://img.shields.io/badge/Angular-18.2.10-DD0031?logo=angular&logoColor=white" alt="Angular 18"/>
   <img src="https://img.shields.io/badge/RabbitMQ-3.13-FF6600?logo=rabbitmq&logoColor=white" alt="RabbitMQ"/>
@@ -61,12 +61,19 @@
 - Totalmente containerizado com Docker
   
 
-##Acessos:
+## Acessos:
 
 Frontend: http://localhost:4200
 Backend + Swagger: http://localhost:8080/swagger-ui.html
 RabbitMQ Management: http://localhost:15672 (guest/guest)
 
+
+## Telas
+
+Tela Inicial <img width="1440" height="894" alt="Captura de Tela 2025-11-25 às 12 23 26" src="https://github.com/user-attachments/assets/96a2d32c-2d58-444b-b673-eca75fe2097d" />
+Graficos de Status <img width="1439" height="697" alt="Captura de Tela 2025-11-25 às 12 24 55" src="https://github.com/user-attachments/assets/b7595ac6-db76-443b-a77c-bc0686cca2a6" />
+Tarefas Criadas <img width="1439" height="684" alt="Captura de Tela 2025-11-25 às 12 25 25" src="https://github.com/user-attachments/assets/17c4b34b-7397-4b88-89ba-afcb8bc89cb9" />
+Editar Tarefa <img width="1437" height="647" alt="Captura de Tela 2025-11-25 às 12 26 27" src="https://github.com/user-attachments/assets/eaaa11a7-955c-462e-abdc-6617d87a4523" />
 
 
 Autor
