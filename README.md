@@ -128,4 +128,4 @@ Editar Tarefa <img width="1437" height="647" alt="Captura de Tela 2025-11-25 à
 
 
 Autor
-Feito por Kamilly
+Feito por: Kamilly
