@@ -68,12 +68,6 @@ Backend + Swagger: http://localhost:8080/swagger-ui.html
 RabbitMQ Management: http://localhost:15672 (guest/guest)
 
 
-## Como Rodar Localmente
-
-### Com Docker Compose (recomendado - 1 comando)
-```bash
-docker-compose up --build
-"
 
 Autor
-Feito com dedicação por Kamilly
+Feito por Kamilly
