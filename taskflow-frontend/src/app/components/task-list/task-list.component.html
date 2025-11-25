@@ -1,0 +1,115 @@
+<!-- src/app/components/task-list/task-list.component.html -->
+<div class="container">
+
+  <!-- Gráficos -->
+  <div class="charts-row">
+    <mat-card class="chart-card">
+      <canvas #pieCanvas></canvas>
+      <p class="chart-label">Distribuição de Status</p>
+    </mat-card>
+    <mat-card class="chart-card">
+      <canvas #barCanvas></canvas>
+      <p class="chart-label">Tarefas Criadas na Semana</p>
+    </mat-card>
+  </div>
+
+  <!-- Cards de estatísticas -->
+  <div class="stats-grid">
+    <mat-card class="stat-card pending">
+      <div class="number">{{ stats.pending }}</div>
+      <div class="label">Pendentes</div>
+      <mat-icon>schedule</mat-icon>
+    </mat-card>
+
+    <mat-card class="stat-card progress">
+      <div class="number">{{ stats.inProgress }}</div>
+      <div class="label">Em Progresso</div>
+      <mat-icon>autorenew</mat-icon>
+    </mat-card>
+
+    <mat-card class="stat-card completed">
+      <div class="number">{{ stats.completed }}</div>
+      <div class="label">Concluídas</div>
+      <mat-icon>check_circle</mat-icon>
+    </mat-card>
+
+    <mat-card class="stat-card total">
+      <div class="number">{{ stats.total }}</div>
+      <div class="label">Total de Tarefas</div>
+      <mat-icon>assignment</mat-icon>
+    </mat-card>
+  </div>
+
+  <h2 class="title">Suas Tarefas</h2>
+
+  <!-- Botão Nova Tarefa -->
+  <div class="actions-header">
+    <button mat-raised-button color="accent" (click)="toggleForm()">
+      <mat-icon>add</mat-icon> Nova Tarefa
+    </button>
+  </div>
+
+  <!-- Formulário Nova/Edição de Tarefa -->
+  <div *ngIf="showForm" class="task-form">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Título</mat-label>
+      <input matInput [(ngModel)]="newTask.title">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Descrição</mat-label>
+      <textarea matInput rows="3" [(ngModel)]="newTask.description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Status</mat-label>
+      <mat-select [(ngModel)]="newTask.status">
+        <mat-option value="PENDING">Pendente</mat-option>
+        <mat-option value="IN_PROGRESS">Em Progresso</mat-option>
+        <mat-option value="COMPLETED">Concluída</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="form-actions">
+      <button mat-raised-button color="primary" (click)="saveTask()">
+        {{ editTaskId ? 'Salvar Alteração' : 'Adicionar Tarefa' }}
+      </button>
+      <button mat-button (click)="cancelForm()">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- Lista de tarefas -->
+  <div class="tasks-grid">
+    <mat-card *ngFor="let task of tasks" class="task-card" [class.completed]="task.status === 'COMPLETED'">
+      <mat-card-header>
+        <div class="task-header">
+          <mat-card-title>{{ task.title }}</mat-card-title>
+          <mat-chip [color]="getStatusColor(task.status)" selected>
+            {{ getStatusLabel(task.status) }}
+          </mat-chip>
+        </div>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p class="description">{{ task.description || 'Sem descrição' }}</p>
+        <small class="date">Criado em {{ task.createdAt | date:'dd/MM/yyyy HH:mm' }}</small>
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <button mat-button color="primary" (click)="editTask(task)">
+          <mat-icon>edit</mat-icon> Editar
+        </button>
+        <button mat-button color="warn" (click)="deleteTask(task.id)">
+          <mat-icon>delete</mat-icon> Excluir
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <!-- Estado vazio -->
+  <div *ngIf="tasks.length === 0" class="empty">
+    <mat-icon>task_alt</mat-icon>
+    <h3>Nenhuma tarefa cadastrada</h3>
+    <p>Clique em "Nova Tarefa" para começar!</p>
+  </div>
+</div>

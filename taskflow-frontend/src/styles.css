@@ -1,0 +1,33 @@
+/* Tema limpo e profissional (empresa usa esse) */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.mat-mdc-toolbar {
+  background: #6366f1 !important;     /* Indigo 500 - cor moderna */
+  color: white;
+  height: 70px !important;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+}
+
+.mat-mdc-card {
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.3s ease;
+  background: white !important;
+}
+
+.mat-mdc-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.mat-mdc-raised-button.mat-accent {
+  background: #ec4899 !important;   /* Pink 500 - botão de ação bem vivo */
+}

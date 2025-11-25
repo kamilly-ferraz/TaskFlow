@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="toolbar">
+  <mat-icon class="icon-large">task_alt</mat-icon>
+  <span class="title">TaskFlow Pro</span>
+  <span class="spacer"></span>
+
+  <button mat-button routerLink="/tasks" routerLinkActive="active">
+    <mat-icon>assignment_turned_in</mat-icon>
+    Tarefas
+  </button>
+
+  <button mat-raised-button color="accent" routerLink="/new-task">
+    <mat-icon>add_task</mat-icon>
+    Nova Tarefa
+  </button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
