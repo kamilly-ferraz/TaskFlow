@@ -1,65 +1,116 @@
 # TaskFlow - Gerenciador de Tarefas com Atualização em Tempo Real
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Angular-21.0.0-DD0031?logo=angular&logoColor=white" alt="Angular 21"/>
-  <img src="https://img.shields.io/badge/Node.js-22.18.0-339933?logo=node.js&logoColor=white" alt="Node.js"/>
-  <img src="https://img.shields.io/badge/RabbitMQ-3.13.7-FF6600?logo=rabbitmq&logoColor=white" alt="RabbitMQ"/>
-  <img src="https://img.shields.io/badge/LocalStorage-F6E05E?logoColor=black" alt="LocalStorage"/>
-  <img src="https://img.shields.io/badge/Docker-27.3-blue?logo=docker&logoColor=white" alt="Docker"/>
+  <img src="https://img.shields.io/badge/Java-17-5382a1?logo=openjdk&logoColor=white" alt="Java 17"/>
+  <img src="https://img.shields.io/badge/Spring_Boot-3.5.8-6DB33F?logo=spring-boot&logoColor=white" alt="Spring Boot 3.5.8"/>
+  <img src="https://img.shields.io/badge/Angular-21.1.0-DD0031?logo=angular&logoColor=white" alt="Angular 21.1.0"/>
+  <img src="https://img.shields.io/badge/RabbitMQ-3.13.7-FF6600?logo=rabbitmq&logoColor=white" alt="RabbitMQ 3.13.7"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-16-336791?logo=postgresql&logoColor=white" alt="PostgreSQL 16"/>
+  <img src="https://img.shields.io/badge/Docker-29.0.1-blue?logo=docker&logoColor=white" alt="Docker 29.0.1"/>
 </p>
 
 
+
 > Sistema completo de CRUD com dashboard em tempo real, mensageria assíncrona e interface moderna.
+
+## Funcionalidades Implementadas
+
+- **CRUD completo de tarefas**: criar, listar, editar e excluir tarefas.  
+- **Dashboard em tempo real**:
+  - Cards de estatísticas (pendentes, em progresso, concluídas e total).  
+  - Gráficos interativos (Chart.js):
+    - Pizza: distribuição de status das tarefas.  
+    - Barra: tarefas criadas por dia da semana.  
+  - Relógio com data/hora atualizada dinamicamente.  
+- **Mensageria assíncrona** com RabbitMQ.  
+- **API REST documentada** com Swagger/OpenAPI.  
+- **Interface moderna e responsiva** com Angular Material.  
+- **Arquitetura modular** utilizando Angular Standalone Components.  
+- **Containerização completa** com Docker (backend, frontend e RabbitMQ).  
+
+
+---
 
 ## Tecnologias Utilizadas
 
 ### Backend (Java + Spring Boot)
 | Tecnologia                  | Versão        | Finalidade                              |
 |-----------------------------|---------------|-----------------------------------------|
-| Java                        | 21 (LTS)      | Linguagem principal                     |
-| Spring Boot                 | 3.3.5         | Framework principal                     |
-| Spring Data JPA             | 3.3.5         | ORM + persistência                      |
-| Spring for RabbitMQ         | 3.3.5         | Mensageria assíncrona                   |
-| Spring Web                  | 6.1.x         | API REST                                |
-| Spring Validation           | 6.1.x         | Validação de entrada                    |
+| Java                        | 17 (LTS)      | Linguagem principal                     |
+| Spring Boot                 | 3.5.8         | Framework principal                     |
+| Spring Data JPA             | 3.5.8         | ORM + persistência                      |
+| Spring for RabbitMQ         | 3.5.8         | Mensageria assíncrona                   |
+| Spring Web                  | 3.5.8         | API REST                                |
+| Spring Validation           | 3.5.8         | Validação de entrada                    |
 | Lombok                      | 1.18.34       | Redução de boilerplate                  |
 | Maven                       | 3.9.9         | Gerenciador de dependências e build     |
 | PostgreSQL                  | 16            | Banco de dados relacional               |
-| RabbitMQ                    | 3.13          | Fila de mensagens (notificações)        |
+| RabbitMQ                    | 3.13.7        | Fila de mensagens (notificações)        |
 | OpenAPI + Swagger UI        | 2.2.20        | Documentação automática da API          |
-| Docker & Docker Compose     | 27.3.1        | Containerização e orquestração          |
+| Docker & Docker Compose     | 29.0.1        | Containerização e orquestração          |
 
-### Frontend (Angular 18 - Standalone)
+### Frontend (Angular 21 - Standalone)
 | Tecnologia                  | Versão        | Finalidade                              |
 |-----------------------------|---------------|-----------------------------------------|
-| Angular                     | 18.2.10       | Framework frontend                      |
+| Angular                     | 21.1.0        | Framework frontend                      |
 | TypeScript                  | 5.6.x         | Tipagem forte                           |
-| Angular Material            | 18.2.10       | Componentes UI modernos                 |
-| Angular Forms               | 18.2.10       | Formulários reativos e template-driven |
+| Angular Material            | 21.1.0        | Componentes UI modernos                 |
+| Angular Forms               | 21.1.0        | Formulários reativos e template-driven |
 | RxJS                        | 7.8.x         | Programação reativa                     |
 | Chart.js                    | 4.4.4         | Gráficos interativos (pizza e barras)  |
 | HTTP Client                 | nativo        | Comunicação com API REST                |
-| Standalone Components       | Angular 18+   | Arquitetura moderna sem NgModules       |
+| Standalone Components       | Angular 21+   | Arquitetura moderna sem NgModules       |
 | SCSS                        | 1.77.x        | Estilização avançada                    |
 
-### Infraestrutura & DevOps
-| Tecnologia                  | Finalidade                              |
-|-----------------------------|-----------------------------------------|
-| Docker                      | Containerização do backend              |
-| Docker Compose              | Orquestração local (Postgres + RabbitMQ + Backend) |
-| Railway / Render / Vercel   | Deploy em produção (cloud-ready)        |
-| Git & GitHub                | Controle de versão e CI/CD básico       |
+---
 
-## Funcionalidades Implementadas
-- CRUD completo de tarefas
-- Dashboard com gráficos em tempo real (Chart.js)
-- Cards de estatísticas (pendentes, em progresso, concluídas)
-- Relógio com data/hora atualizada em tempo real
-- Mensageria com RabbitMQ (producer + consumer)
-- API REST documentada com Swagger/OpenAPI
-- Interface responsiva e moderna com Angular Material
-- Totalmente containerizado com Docker
-  
+## Endpoints Principais (Backend)
+
+| Método | Endpoint           | Descrição                   |
+|--------|------------------|-----------------------------|
+| GET    | /api/tasks        | Lista todas as tarefas      |
+| POST   | /api/tasks        | Cria uma nova tarefa        |
+| PUT    | /api/tasks/{id}   | Atualiza uma tarefa         |
+| DELETE | /api/tasks/{id}   | Remove uma tarefa           |
+
+---
+
+## Estrutura do Projeto
+
+### Backend
+taskflow-backend/
+├─ src/main/java/com/taskflow/
+│ ├─ controller/ # APIs REST
+│ ├─ service/ # Regras de negócio
+│ ├─ repository/ # Acesso a dados
+│ ├─ model/ # Entidades e DTOs
+│ └─ TaskflowApplication.java
+├─ src/main/resources/
+│ ├─ application.properties
+├─ pom.xml
+
+
+### Frontend
+taskflow-frontend/
+├─ src/app/
+│ ├─ components/ # Componentes Standalone (TaskList, TaskForm, etc.)
+│ ├─ services/ # Serviços HTTP (TaskService)
+│ ├─ models/ # Interfaces e tipos TypeScript
+│ └─ app.module.ts
+├─ angular.json
+├─ package.json
+
+
+
+## Endpoints Principais (Backend)
+
+| Método | Endpoint          | Descrição                |
+|--------|-----------------|--------------------------|
+| GET    | /api/tasks       | Lista todas as tarefas   |
+| POST   | /api/tasks       | Cria uma nova tarefa     |
+| PUT    | /api/tasks/{id}  | Atualiza uma tarefa      |
+| DELETE | /api/tasks/{id}  | Remove uma tarefa        |
+
 
 ## Acessos:
 
