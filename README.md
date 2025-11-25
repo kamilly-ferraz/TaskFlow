@@ -2,11 +2,11 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Java-17-5382a1?logo=openjdk&logoColor=white" alt="Java 17"/>
-  <img src="https://img.shields.io/badge/Spring_Boot-3.3.5-6DB33F?logo=spring-boot&logoColor=white" alt="Spring Boot"/>
+  <img src="https://img.shields.io/badge/Spring_Boot-3.5.8-6DB33F?logo=spring-boot&logoColor=white" alt="Spring Boot 3.5.8"/>
   <img src="https://img.shields.io/badge/Angular-18.2.10-DD0031?logo=angular&logoColor=white" alt="Angular 18"/>
-  <img src="https://img.shields.io/badge/RabbitMQ-3.13-FF6600?logo=rabbitmq&logoColor=white" alt="RabbitMQ"/>
+  <img src="https://img.shields.io/badge/RabbitMQ-3.13.7-FF6600?logo=rabbitmq&logoColor=white" alt="RabbitMQ"/>
   <img src="https://img.shields.io/badge/PostgreSQL-16-336791?logo=postgresql&logoColor=white" alt="PostgreSQL"/>
-  <img src="https://img.shields.io/badge/Docker-27.3.1-2496ED?logo=docker&logoColor=white" alt="Docker"/>
+  <img src="https://img.shields.io/badge/Docker-27.3-blue?logo=docker&logoColor=white" alt="Docker"/>
 </p>
 
 > Sistema completo de CRUD com dashboard em tempo real, mensageria assíncrona e interface moderna.
